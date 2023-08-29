@@ -1,0 +1,122 @@
+:root {
+  --shadow-color: 165deg 100% 25%;
+  --shadow-elevation-low: 0px .6px .7px hsl(var(--shadow-color) / .34), -.1px .9px 1px -1.2px hsl(var(--shadow-color) / .34), -.2px 2.2px 2.5px -2.5px hsl(var(--shadow-color) / .34);
+  --shadow-elevation-medium: 0px .6px .7px hsl(var(--shadow-color) / .36), -.1px 1.8px 2px -.8px hsl(var(--shadow-color) / .36), -.3px 4.5px 5.1px -1.7px hsl(var(--shadow-color) / .36), -.8px 11.1px 12.5px -2.5px hsl(var(--shadow-color) / .36);
+  --shadow-elevation-high: 0px .6px .7px hsl(var(--shadow-color) / .34), -.2px 3.2px 3.6px -.4px hsl(var(--shadow-color) / .34), -.4px 6px 6.8px -.7px hsl(var(--shadow-color) / .34), -.7px 9.9px 11.2px -1.1px hsl(var(--shadow-color) / .34), -1.1px 15.8px 17.8px -1.4px hsl(var(--shadow-color) / .34), -1.8px 24.7px 27.9px -1.8px hsl(var(--shadow-color) / .34), -2.7px 37.6px 42.4px -2.1px hsl(var(--shadow-color) / .34), -3.9px 55.4px 62.5px -2.5px hsl(var(--shadow-color) / .34);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efefef;
+  font-family: Inter, sans-serif;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2vw 2vw 0;
+  display: flex;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+main {
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  padding: 2vw;
+  display: grid;
+}
+
+main .user {
+  color: #010123;
+  box-shadow: var(--shadow-elevation-low);
+  grid-gap: 1rem;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  border-radius: 25px;
+  grid-template-columns: 100px 2fr 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem .5rem;
+  transition: all .15s ease-in-out;
+  display: grid;
+  overflow: hidden;
+}
+
+main .user:hover {
+  box-shadow: var(--shadow-elevation-medium);
+  transform: scale(1.02);
+}
+
+main .user--info {
+  cursor: default;
+  align-self: center;
+}
+
+main .user--info h1 {
+  font-size: 1rem;
+}
+
+main .user--info p {
+  color: #666;
+  font-weight: 300;
+}
+
+main .user img {
+  border-radius: 50%;
+  place-self: center;
+  width: 75px;
+  height: 75px;
+}
+
+main .user a {
+  border-radius: 100%;
+  justify-content: center;
+  text-decoration: none;
+  display: flex;
+}
+
+main .user a img {
+  width: 100%;
+}
+
+main .user[data-present="true"] {
+  color: #fff;
+  background-color: #06d6a0;
+}
+
+main .user[data-present="true"] p {
+  color: #fff;
+}
+
+main .user .mail {
+  font-size: 2rem;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem;
+  transition: all .15s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button.selected {
+  color: #fff;
+  background-color: #06d6a0;
+}
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
